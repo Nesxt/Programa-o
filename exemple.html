@@ -1,0 +1,25 @@
+<script>
+        function pulaLinha(){
+            document.wride("<br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+        }
+        function caucularIMC(altura, peso){
+            let imc=peso/(altura*altura);
+            return imc;
+        }
+        let alturaDoUsuario=prompt("Bom Dia!, qual a sua altura?");
+        let pesoDoUsuario=prompt("E o seu peso?");
+        let imcDoUsuario=Math.round(caucularIMC(alturaDoUsuario, pesoDoUsuario));
+        mostra("O seu IMC é " + imcDoUsuario);
+        if(imcDoUsuario<18.5){
+            alert("Seu IMC indica que voce esta ABAIXO do seu peso ideal");
+        }
+        if(imcDoUsuario>35){
+            alert("Seu IMC indica que voce esta ACIMA do seu peso ideal");
+        }
+        if(imcDoUsuario>=18.5 && imcDoUsuario<=35){
+            alert("PARABENS, voce esta na media do seu peso");
+        }
+    </script>
